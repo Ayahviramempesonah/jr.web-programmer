@@ -24,3 +24,40 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+
+
+     @keyframes fade-in-up {
+       from {
+         opacity: 0;
+         transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* 2. Kelas untuk menerapkan animasi halaman */
+    .animate-page-load {
+      animation: fade-in-up 0.5s ease-out forwards;
+    }
+    
+    /* 3. Kelas untuk tombol interaktif */
+    .interactive-button {
+      /* Menyiapkan transisi yang mulus untuk 
+      properti 'transform' */
+      transition: transform 0.2s ease-in-out;
+    }
+    
+    .interactive-button:hover {
+      /* Efek membesar saat kursor di atas tombol */
+      transform: scale(1.05);
+    }
+    
+    .interactive-button:active {
+      /* Efek mengecil saat tombol diklik */
+      transform: scale(0.95);
+    }
+    
